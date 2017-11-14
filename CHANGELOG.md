@@ -8,6 +8,10 @@ and this project adheres to
 
 ## [Unreleased]
 
+### Fixed
+
+* Removed junit folder from npm package
+
 ## [1.3.0] - 2017-11-12
 
 ### Added
