@@ -21,6 +21,8 @@ export interface Options {
   boundary?: Element
   centerIfNeeded?: boolean
   offset?: Offset
+  onDone?: Function
+  duration?: number
 }
 
 const handleScroll: handleScrollCallback = (
@@ -136,4 +138,9 @@ export default function calculate(target: Element, options: Options) {
     )
     target = parent
   }
+  setTimeout(() => {
+    if (config.onDone) {
+      config.onDone()
+    }
+  }, config.duration || 0)
 }

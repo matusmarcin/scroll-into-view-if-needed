@@ -43,6 +43,8 @@ export interface Options extends CalculateOptions {
   duration?: number
   // Easing only take effect if a duration is set
   easing?: 'ease' | 'easeIn' | 'easeOut' | 'easeInOut' | 'linear'
+  // On done callback
+  onDone?: Function
 }
 
 function isBoolean(options: boolean | Options): options is boolean {
